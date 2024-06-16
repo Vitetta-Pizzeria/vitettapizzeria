@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="lockscreen" class="lockscreen"
+        style="display: flex;justify-content: center;align-items: center;margin-top: 100px;">
+        <div class="lockscreen-content text-center">
+            <img src="../assets/img/favicon.ico" alt="" width="100" class="mb-3">
+            <h2>Bitte PIN Eingeben</h2>
+            <input type="password" id="pinInput" maxlength="4"
+                style="font-size: 18pt;border: 1px solid blueviolet;border-radius: 8px; padding: 5px;"><br>
+            <button id="unlockBtn" class="btn btn-lg btn-danger mt-3">Einloggen</button>
+        </div>
+    </div>
+    <div id="pageContent" style="display: none;">
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="close-btn">&times;</span>
+                <h2 id="popup-message"></h2>
+            </div>
+        </div>
+        <div class="admin-panel">
+            <h2>Vitetta Admin</h2>
+            <label for="show-popup">Nachricht Anzeigen</label>
+            <input type="checkbox" id="show-popup">
+            <br>
+            <label for="popup-text">Nachrichten Text</label>
+            <textarea id="popup-text" rows="4" cols="50"></textarea>
+            <br>
+            <button id="save-settings">Nachrichten Status Aktuallisieren</button>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lockscreen = document.getElementById('lockscreen');
+            const pageContent = document.getElementById('pageContent');
+            const pinInput = document.getElementById('pinInput');
+            const unlockBtn = document.getElementById('unlockBtn');
+            const correctPin = "2584"; // Change this to your desired PIN
+
+            unlockBtn.addEventListener('click', () => {
+                const enteredPin = pinInput.value;
+                if (enteredPin === correctPin) {
+                    window.location.href = "https://www.vitettapizzeria.ch/pizzasforyou.html"; // Replace "https://www.example.com" with the URL you want to redirect to
+                } else {
+                    // Display an error message or handle incorrect PIN
+                    alert('Incorrect PIN. Please try again.');
+                    pinInput.value = ''; // Clear the input field
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

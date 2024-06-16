@@ -1,0 +1,1 @@
+use supa base to add cms functionallity via sepereate admin page where you login with a code similar to a phone lockscreen and add the functionality to toogle wif a user should be shown a pop up with certaian content upon opening the site write also the sql to create certain tables that are needed

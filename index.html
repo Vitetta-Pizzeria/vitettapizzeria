@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Pizzeria Vitetta</title>
+  <meta content="Die Pizzeria Vitetta in Brig, an der Furkastrasse 22" name="description" />
+  <meta content="Pizza, Brig, Mittag, Restaurant, Essen" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <style>
+    .popup {
+      display: none;
+      /* Hide popup initially */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: +3;
+    }
+
+    .popup-content {
+      background: #198754;
+      color: white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-radius: 5px;
+      position: relative;
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <h2 id="popup-message"></h2>
+    </div>
+  </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- image logo -->
+        <img class="logo" src="assets/img/logotext.png" alt="Logo" />
+      </a>
+
+      <nav id="navbar" class="navbar">
+
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#pizzas">Pizzas</a></li>
+          <li><a href="#pizzaiolo">Pizzaiolo</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <!-- .navbar -->
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+      <div class="row justify-content-between gy-5">
+        <div
+          class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Die Beste Pizza <br />in Brig</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Komm vorbei und überzeug dich Selbst.
+          </p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="tel:0763427373" class="btn-book-a-table"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                height="20" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 5px;">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg> Take A Way / Reservieren? </a>
+          </div>
+        </div>
+        <div class="col-lg-7 order-1 order-lg-5 text-center text-lg-start">
+          <img src="assets/img/hero-img.jpg" class="img-fluid" alt="" style="border-radius: 15px" data-aos="zoom-out"
+            data-aos-delay="200" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+    <!-- ======= Menu Section ======= -->
+    <section id="pizzas" class="menu">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header m-5" style="margin-top: 20px">
+          <p>Die Qual <span>Der Wahl</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <!-- End tab nav item -->
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+            <div class="tab-pane fade active show" id="menu-starters">
+              <div class="container w-100">
+                <div class="accordion m-5" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h3 class="text-success">Extra Zutaten</h3>
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <h6>
+                          <span class="badge bg-success m-2" id="small">small <br class="m-1" />
+                            1 CHF
+                          </span>
+                          <span class="badge bg-success m-2" id="normal">normal <br class="m-1" />
+                            2 CHF
+                          </span>
+                          <span class="badge bg-success m-2" id="persons">2 persons <br class="m-1" />
+                            3 CHF
+                          </span>
+                          <span class="badge bg-success m-2" id="family">family <br class="m-1" />
+                            4 CHF
+                          </span>
+                          <hr>
+                        </h6><!--
+                      <h6 class="text-success">Trockenfleisch - Rohschinken</h6> 
+                      <h6>
+                        <span class="badge bg-success m-2" id="small"
+                          >small <br class="m-1"/>
+                          3 CHF
+                        </span>
+                        <span class="badge bg-success m-2" id="normal"
+                          >normal <br class="m-1"/>
+                          4 CHF
+                        </span>
+                        <span class="badge bg-success m-2" id="persons"
+                          >2 persons <br class="m-1"/>
+                          5 CHF
+                        </span>
+                        <span class="badge bg-success m-2" id="family"
+                          >family <br class="m-1"/>
+                          6 CHF
+                        </span>
+                      </h6> -->
+                        <h6 class="text-success">Allergene</h6>
+
+                        <p class="text-success">Betreffend Allergenen und Intoleranzen geben usere Mitarbeiter auf
+                          Anfrage gerne Auskunft.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row gy-5 w-100">
+                  <div class="my-1 container w-100" id="pizza">
+                    <div class="card" id="pizzas">
+                      <div class="card-header" style="background: white">
+                        <h1 class="fs-2 text-dark mt-4 fill-dark text-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="">
+                            <path
+                              d="M441.82,67.83l0,0C383.44,44.73,317.3,32,255.56,32,192,32,125.76,44.53,69,67.26,48.7,75.49,45.21,90,48.71,100.82L52.78,111a16,16,0,0,0,21.31,8.69c10.8-4.76,23.93-10.54,27-11.78C145.1,89.64,198.71,80,256,80c57.47,0,108.09,9.24,154.76,28.25h0c4.42,1.8,14.88,6.42,26.17,11.46a16,16,0,0,0,21.35-8.59L462,102l.34-.9C465.79,90.89,462.48,76.05,441.82,67.83Z" />
+                            <path
+                              d="M409.18,140.86C363.67,122.53,307.68,112,255.56,112a425,425,0,0,0-153.74,28.89c-.53.21-2.06.88-4.29,1.88a16,16,0,0,0-8,21.27c4,8.71,9.42,20.58,15.5,33.89C137.94,270,199.21,404,227.26,462A31.74,31.74,0,0,0,256,480h0a31.73,31.73,0,0,0,28.76-18.06l.06-.13,137.3-297.57a15.94,15.94,0,0,0-8.31-21.45c-2.26-.95-3.85-1.61-4.5-1.87Zm-215.1,83.07a32,32,0,1,1,29.85-29.85A32,32,0,0,1,194.08,223.93Zm64,128a32,32,0,1,1,29.85-29.85A32,32,0,0,1,258.08,351.93Zm64-112a32,32,0,1,1,29.85-29.85A32,32,0,0,1,322.08,239.93Z" />
+                          </svg>
+                          Pizza Karte
+                        </h1>
+                        <br />
+                      </div>
+                    </div>
+
+
+                    <span id="DE" style="display: block;" class="text-center border">
+
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Margherita</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              16.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              18.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              34.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              45.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">Tomaten, Mozzarella</p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body mt-0">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Prosciutto</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              19.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              21.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              40.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              51.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella & Schinken
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Napoli</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              18.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              19.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              38.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              49.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients"></p>
+                        Tomaten, Mozzarella, Sardellen & Kapern
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">4 Formaggi</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              19.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              21.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              40.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              51.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients"></p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Pugliese</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              18.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              19.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              38.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              49.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella & Zwiebeln
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Tonno</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              19.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              21.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              40.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              51.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella & Thunfisch
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Prosciutto e Funghi</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              20.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              42.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              53.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Schinken & Pilze
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">4 Stagioni</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              24.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              44.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              55.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Schinken, Pilze, Artischocken & Oliven
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Hawaii</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              20.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              42.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              53.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Schinken & Ananas
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Calzone</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              20.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              42.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              53.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Schinken & Pilze
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Calabrese</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              19.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              21.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              40.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              51.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella & pikante Salami
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Posta</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              24.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              44.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              55.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, pikante Salami, Oliven, Peperoni & Zwiebeln
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Pep</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              24.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              44.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              55.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Schinken, Peperoni, Oliven & Kapern
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Vegetarianna</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              24.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              44.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              55.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Peperoni, Mais, Plize, Oliven & Cherrry
+                          Tomaten
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Vitetta</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              24.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              44.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              55.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, pikante Salami, Oliven, Gorgonzola, Thunfisch
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Frutti di Mare</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              22.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              24.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              44.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              55.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients"></p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Parma</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              23.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              25.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              46.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              57.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Rohschinken, Grana, Rucola & Cherry Tomaten
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Fantasia</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              23.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              25.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              46.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              57.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Mozzarella, pikante Salami, getrocknete Tomaten, Oliven, Rucola &
+                          Grana
+                        </p>
+                        <hr class="mb-0" />
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title fs-3">
+                          Pizza <span id="pizza">Trockenfleisch</span>
+                          <h6>
+                            <span class="badge bg-dark" id="small">small <br />
+                              23.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="normal">normal <br />
+                              25.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="persons">2 persons <br />
+                              46.00 CHF
+                            </span>
+                            <span class="badge bg-dark" id="family">family <br />
+                              57.00 CHF
+                            </span>
+                          </h6>
+                        </h5>
+                        <p class="card-text fs-5" id="ingredients">
+                          Tomaten, Mozzarella, Trockenfleisch & Grana
+                        </p>
+                      </div>
+                    </span>
+                    <!-- End of German -->
+
+
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- End Menu Content -->
+          </div>
+      </div>
+
+      </div>
+    </section>
+    <!-- End Menu Section -->
+
+    <!-- ======= Chefs Section ======= -->
+    <section id="pizzaiolo" class="chefs section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header" style="margin-top: 20px">
+          <p>Der <span>Italienische</span> Küchen Zauberer</p>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-4 d-flex justify-content-center align-items-center" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="chef-member">
+              <div class="member-img">
+                <img src="assets/img/chefs/francesco.jpeg" class="img-fluid" alt="" />
+                <!--
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>-->
+              </div>
+              <div class="member-info">
+                <h4>Francesco Vitetta</h4>
+                <span>Pizzaiolo</span>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Chefs Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <p>Pictures by <span><a href="https://www.philbucher.com/">@PHILBUCHER</a></span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpeg"><img
+                  src="assets/img/gallery/gallery-1.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpeg"><img
+                  src="assets/img/gallery/gallery-2.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpeg"><img
+                  src="assets/img/gallery/gallery-3.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpeg"><img
+                  src="assets/img/gallery/gallery-4.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpeg"><img
+                  src="assets/img/gallery/gallery-5.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpeg"><img
+                  src="assets/img/gallery/gallery-6.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpeg"><img
+                  src="assets/img/gallery/gallery-7.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpeg"><img
+                  src="assets/img/gallery/gallery-8.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-9.jpeg"><img
+                  src="assets/img/gallery/gallery-9.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-10.jpeg"><img
+                  src="assets/img/gallery/gallery-10.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-11.jpeg"><img
+                  src="assets/img/gallery/gallery-11.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-12.jpeg"><img
+                  src="assets/img/gallery/gallery-12.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-13.jpeg"><img
+                  src="assets/img/gallery/gallery-13.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-14.jpeg"><img
+                  src="assets/img/gallery/gallery-14.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-15.jpeg"><img
+                  src="assets/img/gallery/gallery-15.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-16.jpeg"><img
+                  src="assets/img/gallery/gallery-16.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-17.jpeg"><img
+                  src="assets/img/gallery/gallery-17.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-18.jpeg"><img
+                  src="assets/img/gallery/gallery-18.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-19.jpeg"><img
+                  src="assets/img/gallery/gallery-19.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-20.jpeg"><img
+                  src="assets/img/gallery/gallery-20.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-21.jpeg"><img
+                  src="assets/img/gallery/gallery-21.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-21.jpeg"><img
+                  src="assets/img/gallery/gallery-21.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-22.jpeg"><img
+                  src="assets/img/gallery/gallery-22.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-23.jpeg"><img
+                  src="assets/img/gallery/gallery-23.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-24.jpeg"><img
+                  src="assets/img/gallery/gallery-24.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-25.jpeg"><img
+                  src="assets/img/gallery/gallery-25.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-26.jpeg"><img
+                  src="assets/img/gallery/gallery-26.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-27.jpeg"><img
+                  src="assets/img/gallery/gallery-27.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-28.jpeg"><img
+                  src="assets/img/gallery/gallery-28.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-29.jpeg"><img
+                  src="assets/img/gallery/gallery-29.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-30.jpeg"><img
+                  src="assets/img/gallery/gallery-30.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-31.jpeg"><img
+                  src="assets/img/gallery/gallery-31.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-32.jpeg"><img
+                  src="assets/img/gallery/gallery-32.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-33.jpeg"><img
+                  src="assets/img/gallery/gallery-33.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-34.jpeg"><img
+                  src="assets/img/gallery/gallery-34.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-35.jpeg"><img
+                  src="assets/img/gallery/gallery-35.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-36.jpeg"><img
+                  src="assets/img/gallery/gallery-36.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-37.jpeg"><img
+                  src="assets/img/gallery/gallery-37.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-38.jpeg"><img
+                  src="assets/img/gallery/gallery-38.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-39.jpeg"><img
+                  src="assets/img/gallery/gallery-39.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-40.jpeg"><img
+                  src="assets/img/gallery/gallery-40.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-41.jpeg"><img
+                  src="assets/img/gallery/gallery-41.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-42.jpeg"><img
+                  src="assets/img/gallery/gallery-42.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-43.jpeg"><img
+                  src="assets/img/gallery/gallery-43.jpeg" class="img-fluid" alt="" /></a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Gallery Section -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Standort</h4>
+            <p>
+              <a href="https://maps.app.goo.gl/oy2aMtUWDkv5tZMD6">
+                Furkastrasse 22<br />
+                3900 Brig<br /></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>
+              Reservationen & <br />
+              Bestellungen
+            </h4>
+            <p>
+              <strong>Telfon:</strong>
+              <a href="tel:0763427373">+41 076 342 73 73</a><br />
+              <!--<strong>Email:</strong> info@example.com<br />-->
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Öffnungszeiten</h4>
+            <p>
+              <strong>Montag-Samstag</strong><br />
+              11:30-13:00 | 18:00-20:30
+              <br />
+              <strong>Sonntag</strong><br />
+              Geschlossen
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="admin-panel" style="display: none;">
+      <h2>Vitetta Admin</h2>
+      <hr>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="show-popup">
+        <label class="form-check-label" id="show-popup">
+          <h4>Nachricht Anzeigen</h4>
+        </label>
+      </div>
+      <hr>
+      <br>
+      <label for="popup-text">
+        <h4>Nachrichten Text</h4>
+      </label><br>
+      <textarea id="popup-text" rows="4" cols="50"></textarea>
+      <br>
+      <button id="save-settings" class="btn btn-success btn-lg mt-3">Nachrichten Status Aktuallisieren</button>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Pizzeria Vitetta</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+        Designed with ❤️ by <a href="#">LUG DESIGN</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+
+      const { createClient } = await import('https://cdn.skypack.dev/@supabase/supabase-js');
+
+      const supabase = createClient('https://periczvzkzpuusfhsoxl.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBlcmljenZ6a3pwdXVzZmhzb3hsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcxNzI1NTM3NSwiZXhwIjoyMDMyODMxMzc1fQ.HZ7Y7aHAokpgE861uIKlZJBD6BlMna5mRa-f6IOhh6c');
+
+
+      const popup = document.getElementById('popup');
+      const popupMessage = document.getElementById('popup-message');
+      const showPopupCheckbox = document.getElementById('show-popup');
+      const popupText = document.getElementById('popup-text');
+      const saveSettingsButton = document.getElementById('save-settings');
+      const closeBtn = document.getElementById('close-btn');
+
+      // Load current settings from Supabase
+      try {
+        const { data, error } = await supabase
+          .from('popup_settings')
+          .select('*')
+          .single();
+
+        if (error) {
+          throw error;
+        }
+
+        // Update UI with current settings
+        if (data) {
+          showPopupCheckbox.checked = data.show;
+          popupText.value = data.message;
+          if (data.show) {
+            popupMessage.textContent = data.message;
+            popup.style.display = 'flex';
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching popup settings:', error.message);
+      }
+
+      // Save settings to Supabase
+      saveSettingsButton.addEventListener('click', async () => {
+        const show = showPopupCheckbox.checked;
+        const message = popupText.value;
+
+        try {
+          const { data, error } = await supabase
+            .from('popup_settings')
+            .select('*')
+            .single();
+
+          let updateError;
+          if (data) {
+            ({ error: updateError } = await supabase
+              .from('popup_settings')
+              .update({ show, message })
+              .eq('id', data.id));
+          } else {
+            ({ error: updateError } = await supabase
+              .from('popup_settings')
+              .insert([{ show, message }]));
+          }
+
+          if (updateError) {
+            throw updateError;
+          }
+
+          // Update popup display
+          if (show) {
+            popupMessage.textContent = message;
+            popup.style.display = 'flex';
+          } else {
+            popup.style.display = 'none';
+          }
+        } catch (error) {
+          console.error('Error updating popup settings:', error.message);
+        }
+      });
+
+      // Toggle popup display on checkbox change
+      showPopupCheckbox.addEventListener('change', () => {
+        if (showPopupCheckbox.checked) {
+          popup.style.display = 'flex';
+        } else {
+          popup.style.display = 'none';
+        }
+      });
+
+      // Close popup
+      closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+
+</html>
