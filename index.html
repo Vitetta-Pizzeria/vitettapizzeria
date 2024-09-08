@@ -132,67 +132,47 @@
           <p>Die Qual <span>Der Wahl</span></p>
         </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Extra Zutaten</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>
+          <span class="badge bg-success m-2" id="small">small <br class="m-1" />
+            1 CHF
+          </span>
+          <span class="badge bg-success m-2" id="normal">normal <br class="m-1" />
+            2 CHF
+          </span>
+          <span class="badge bg-success m-2" id="persons">2 persons <br class="m-1" />
+            3 CHF
+          </span>
+          <span class="badge bg-success m-2" id="family">family <br class="m-1" />
+            4 CHF
+          </span>
+          <hr>
+      </h6>
+      
+      <h6 class="text-success">Allergene</h6>
+      
+      <p class="text-success">Betreffend Allergenen und Intoleranzen geben usere Mitarbeiter auf
+        Anfrage gerne Auskunft.</p>
+      </div>
+      </div>
+      </div>
+      </div>
         <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <!-- End tab nav item -->
           <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
             <div class="tab-pane fade active show" id="menu-starters">
               <div class="container w-100">
-                <div class="accordion m-5" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <h3 class="text-success">Extra Zutaten</h3>
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <h6>
-                          <span class="badge bg-success m-2" id="small">small <br class="m-1" />
-                            1 CHF
-                          </span>
-                          <span class="badge bg-success m-2" id="normal">normal <br class="m-1" />
-                            2 CHF
-                          </span>
-                          <span class="badge bg-success m-2" id="persons">2 persons <br class="m-1" />
-                            3 CHF
-                          </span>
-                          <span class="badge bg-success m-2" id="family">family <br class="m-1" />
-                            4 CHF
-                          </span>
-                          <hr>
-                        </h6><!--
-                      <h6 class="text-success">Trockenfleisch - Rohschinken</h6> 
-                      <h6>
-                        <span class="badge bg-success m-2" id="small"
-                          >small <br class="m-1"/>
-                          3 CHF
-                        </span>
-                        <span class="badge bg-success m-2" id="normal"
-                          >normal <br class="m-1"/>
-                          4 CHF
-                        </span>
-                        <span class="badge bg-success m-2" id="persons"
-                          >2 persons <br class="m-1"/>
-                          5 CHF
-                        </span>
-                        <span class="badge bg-success m-2" id="family"
-                          >family <br class="m-1"/>
-                          6 CHF
-                        </span>
-                      </h6> -->
-                        <h6 class="text-success">Allergene</h6>
-
-                        <p class="text-success">Betreffend Allergenen und Intoleranzen geben usere Mitarbeiter auf
-                          Anfrage gerne Auskunft.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="row gy-5 w-100">
                   <div class="my-1 container w-100" id="pizza">
-                    <div class="card" id="pizzas">
+                    <div class="card mb-3" id="pizzas">
                       <div class="card-header" style="background: white">
                         <h1 class="fs-2 text-dark mt-4 fill-dark text-center">
                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" fill="">
@@ -206,446 +186,7 @@
                         <br />
                       </div>
                     </div>
-
-
-                    <span id="DE" style="display: block;" class="text-center border">
-
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Margherita</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              16.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              18.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              34.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              45.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">Tomaten, Mozzarella</p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body mt-0">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Prosciutto</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              19.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              21.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              40.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              51.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella & Schinken
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Napoli</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              18.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              19.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              38.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              49.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients"></p>
-                        Tomaten, Mozzarella, Sardellen & Kapern
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">4 Formaggi</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              19.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              21.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              40.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              51.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients"></p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Pugliese</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              18.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              19.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              38.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              49.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella & Zwiebeln
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Tonno</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              19.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              21.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              40.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              51.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella & Thunfisch
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Prosciutto e Funghi</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              20.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              42.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              53.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Schinken & Pilze
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">4 Stagioni</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              24.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              44.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              55.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Schinken, Pilze, Artischocken & Oliven
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Hawaii</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              20.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              42.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              53.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Schinken & Ananas
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Calzone</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              20.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              42.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              53.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Schinken & Pilze
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Calabrese</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              19.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              21.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              40.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              51.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella & pikante Salami
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Posta</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              24.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              44.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              55.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, pikante Salami, Oliven, Peperoni & Zwiebeln
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Pep</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              24.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              44.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              55.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Schinken, Peperoni, Oliven & Kapern
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Vegetarianna</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              24.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              44.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              55.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Peperoni, Mais, Plize, Oliven & Cherrry
-                          Tomaten
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Vitetta</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              24.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              44.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              55.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, pikante Salami, Oliven, Gorgonzola, Thunfisch
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Frutti di Mare</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              22.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              24.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              44.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              55.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients"></p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Parma</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              23.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              25.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              46.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              57.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Rohschinken, Grana, Rucola & Cherry Tomaten
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Fantasia</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              23.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              25.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              46.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              57.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Mozzarella, pikante Salami, getrocknete Tomaten, Oliven, Rucola &
-                          Grana
-                        </p>
-                        <hr class="mb-0" />
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title fs-3">
-                          Pizza <span id="pizza">Trockenfleisch</span>
-                          <h6>
-                            <span class="badge bg-dark" id="small">small <br />
-                              23.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="normal">normal <br />
-                              25.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="persons">2 persons <br />
-                              46.00 CHF
-                            </span>
-                            <span class="badge bg-dark" id="family">family <br />
-                              57.00 CHF
-                            </span>
-                          </h6>
-                        </h5>
-                        <p class="card-text fs-5" id="ingredients">
-                          Tomaten, Mozzarella, Trockenfleisch & Grana
-                        </p>
-                      </div>
-                    </span>
-                    <!-- End of German -->
-
-
-
+                    <div id="pizza-container"></div>
                   </div>
                 </div>
 
@@ -992,6 +533,54 @@
       const supabase = createClient('https://periczvzkzpuusfhsoxl.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBlcmljenZ6a3pwdXVzZmhzb3hsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcxNzI1NTM3NSwiZXhwIjoyMDMyODMxMzc1fQ.HZ7Y7aHAokpgE861uIKlZJBD6BlMna5mRa-f6IOhh6c');
 
 
+      async function fetchPizzas() {
+        let { data, error } = await supabase
+          .from('pizzas')
+          .select('*');
+
+        if (error) {
+          console.error("Error fetching pizzas:", error);
+          return null;
+        }
+
+        return data;
+      }
+
+      // Function to create HTML elements for each pizza
+      function createPizzaItems(pizzas) {
+        const pizzaContainer = document.getElementById('pizza-container'); // Assuming there's a container in your HTML
+
+        pizzas.forEach(pizza => {
+          // Create a div for each pizza
+          const pizzaDiv = document.createElement('div');
+          pizzaDiv.className = 'pizza-item border border-1 border-danger p-2 rounded-3 mb-3';
+
+          // Use 'pizza' (singular) instead of 'pizzas' (plural) to access individual properties
+          pizzaDiv.innerHTML = `
+      <h3 class="fw-bold">${pizza.name} <!-- Button trigger modal -->
+<button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Extra Zutaten
+</button></h3>
+      <hr>
+      <p>${pizza.description}</p>
+      <p class="badge text-bg-secondary">
+        small ${pizza.small_price} | normal ${pizza.normal_price} | 2 persons ${pizza.persons_price} | family ${pizza.family_price}
+      </p>
+    `;
+
+          // Append the pizzaDiv to the container
+          pizzaContainer.appendChild(pizzaDiv);
+        });
+      }
+
+      // Fetch pizzas and create HTML items
+      fetchPizzas().then(pizzas => {
+        if (pizzas) {
+          createPizzaItems(pizzas);
+        }
+      });
+      
+
       const popup = document.getElementById('popup');
       const popupMessage = document.getElementById('popup-message');
       const showPopupCheckbox = document.getElementById('show-popup');
@@ -1075,6 +664,8 @@
       closeBtn.addEventListener('click', () => {
         popup.style.display = 'none';
       });
+
+
     });
   </script>
 </body>
