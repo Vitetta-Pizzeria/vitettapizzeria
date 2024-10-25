@@ -27,6 +27,16 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+  <!-- GA-4 Tag-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5NG0QBTJ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-X5NG0QBTJ0');
+  </script>
+
   <style>
     .popup {
       display: none;
@@ -42,15 +52,18 @@
     }
 
     .popup-content {
-      background: #198754;
-      color: white;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 25px;
-      padding-right: 25px;
-      border-radius: 5px;
+      background: #e5e5e5;
+      color: rgb(19, 19, 19);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 8px;
       position: relative;
       text-align: center;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.218);
+      border: 0.5px dotted rgba(251, 7, 7, 0.407);
+      margin: 12px;
     }
 
     .close-btn {
@@ -82,8 +95,18 @@
       </a>
 
       <nav id="navbar" class="navbar">
-
         <ul>
+          <span
+            style="border: 1px solid rgb(0, 0, 0) ;border-radius: 12px ; padding: 10px 2px;margin: 5px; font-size: 10pt;display: flex;flex-wrap: wrap;">
+            <span style="border: 1px solid green ;border-radius: 8px ; padding: 5px 10px;margin: 5px; font-size: 10pt;">Bezahlung
+              mit
+              Karte oder
+              TWINT
+              <i class="bi bi-credit-card-2-back"></i></span>
+            <span style="border: 1px solid red ;border-radius: 8px ; padding: 5px 10px;margin: 5px; font-size: 10pt;">Wir
+              akzeptieren kein Bargeld
+              <img src="assets/img/nocash-d.png" alt="" width="18px"></span>
+          </span>
           <li><a href="#hero">Home</a></li>
           <li><a href="#pizzas">Pizzas</a></li>
           <li><a href="#pizzaiolo">Pizzaiolo</a></li>
@@ -183,10 +206,9 @@
                           </svg>
                           Pizza Karte
                         </h1>
-                        <br />
                       </div>
                     </div>
-                    <div id="pizza-container"></div>
+                    <div id="pizza-container" class="d-flex flex-wrap justify-content-center"></div>
                   </div>
                 </div>
 
@@ -453,7 +475,7 @@
             </h4>
             <p>
               <strong>Telfon:</strong>
-              <a href="tel:0763427373">+41 076 342 73 73</a><br />
+              <a href="tel:0763427373">+41 76 342 73 73</a><br />
               <!--<strong>Email:</strong> info@example.com<br />-->
             </p>
           </div>
@@ -464,15 +486,35 @@
           <div>
             <h4>Öffnungszeiten</h4>
             <p>
-              <strong>Montag-Samstag</strong><br />
-              11:30-13:00 | 18:00-20:30
+              <strong>Mo</strong><br />
+              Geschlossen| 18:00-20:30
+              <br />
+              <strong>Di-Mi</strong><br />
+              11:00-13:00| 18:00-20:30
+              <br />
+              <strong>Do-Sa</strong><br />
+              11:00-13:00| 18:00-21:00
               <br />
               <strong>Sonntag</strong><br />
-              Geschlossen
+              Ruhetag
               <br />
-            </p>
-          </div>
-        </div>
+              </p>
+              </div>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links d-flex" id="zahlungsmethoden">
+                <i class="bi bi-wallet2 icon"></i>
+                <div>
+                  <h4>Zahlungsmethoden</h4>
+                  <p>
+                    <span style="border: 1px solid green ;border-radius: 8px ; padding: 5px 10px;margin: 5px; font-size: 8pt;">
+                      Karte oder TWINT
+                      <i class="bi bi-credit-card-2-back"></i></span> <br> <br>
+                    <span style="border: 1px solid red ;border-radius: 8px ; padding: 5px 10px;margin: 5px; font-size: 8pt;">
+                      Wir akzeptieren kein Bargeld
+                      <img src="assets/img/nocash-l.png" alt="" width="18px"></span>
+                  </p>
+                </div>
+              </div>
       </div>
     </div>
     <div class="admin-panel" style="display: none;">
@@ -553,19 +595,44 @@
         pizzas.forEach(pizza => {
           // Create a div for each pizza
           const pizzaDiv = document.createElement('div');
-          pizzaDiv.className = 'pizza-item border border-1 border-danger p-2 rounded-3 mb-3';
+          pizzaDiv.classList.add('m-1', 'mb-2', 'card');
+          pizzaDiv.style.width = "18rem"
 
           // Use 'pizza' (singular) instead of 'pizzas' (plural) to access individual properties
           pizzaDiv.innerHTML = `
-      <h3 class="fw-bold">${pizza.name} <!-- Button trigger modal -->
-<button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
- Extra Zutaten
-</button></h3>
-      <hr>
-      <p>${pizza.description}</p>
-      <p class="badge text-bg-secondary">
-        small ${pizza.small_price} | normal ${pizza.normal_price} | 2 persons ${pizza.persons_price} | family ${pizza.family_price}
-      </p>
+          <div class="card-body">
+            <h3 class="card-title fw-bold mb-2">${pizza.name}
+            </h3>
+              <p class="text-start"> 
+                <button type="button" class="btn btn-sm btn-outline-success text-center" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:8pt;">
+                  Extra Zutaten
+                </button>
+              </p>
+            <hr>
+            <p class="card-text text-body-tertiary">${pizza.description}</p>
+              <table>
+                <tr>
+                  <td><p class="fw-4" style="font-size:8pt;">small</p></td>
+                      <td><p class="fw-4" style="font-size:8pt;">|</p></td>
+                  <td><p class="fw-bold" style="font-size:8pt;">${pizza.small_price}</p></td>
+                </tr>
+                <tr>
+                  <td><p class="fw-4" style="font-size:8pt;">normal</p></td>
+                  <td><p class="fw-4" style="font-size:8pt;">|</p></td>
+                  <td><p class="fw-bold" style="font-size:8pt;">${pizza.normal_price}</p></td>
+                </tr>
+                <tr>
+                  <td><p class="fw-4" style="font-size:8pt;">2-persons</p></td>
+                  <td><p class="fw-4" style="font-size:8pt;">|</p></td>
+                  <td><p class="fw-bold" style="font-size:8pt;">${pizza.persons_price}</p></td>
+                </tr>
+                <tr>
+                  <td><p class="fw-4" style="font-size:8pt;">family</p></td>
+                  <td><p class="fw-4" style="font-size:8pt;">|</p></td>
+                  <td><p class="fw-bold" style="font-size:8pt;">${pizza.family_price}</p></td>
+                </tr>
+            </table>
+          </div>
     `;
 
           // Append the pizzaDiv to the container
