@@ -28,7 +28,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+                                      gtag('js', new Date());
     gtag('config', 'G-X5NG0QBTJ0');
   </script>
 
@@ -586,7 +586,7 @@
 
         pizzas.forEach(pizza => {
           const pizzaCol = document.createElement('div');
-          pizzaCol.classList.add('col-lg-4', 'col-md-6');
+          pizzaCol.classList.add('col-lg-4', 'col-md-6', 'm-2');
 
           pizzaCol.innerHTML = `
             <div class="card h-100">
@@ -598,7 +598,6 @@
                   <tbody>
                     <tr><td>small</td><td class="text-end fw-bold">${pizza.small_price} CHF</td></tr>
                     <tr><td>normal</td><td class="text-end fw-bold">${pizza.normal_price} CHF</td></tr>
-                    <tr><td>2-persons</td><td class="text-end fw-bold">${pizza.persons_price} CHF</td></tr>
                     <tr><td>family</td><td class="text-end fw-bold">${pizza.family_price} CHF</td></tr>
                   </tbody>
                 </table>
@@ -699,8 +698,8 @@
         popup.addEventListener('click', (event) => {
           if (event.target === popup) {
             popup.style.display = 'none';
-              }
-          });
+          }
+        });
       }
     });
   </script>
